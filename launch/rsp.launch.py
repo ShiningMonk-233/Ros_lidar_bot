@@ -1,3 +1,4 @@
+#author : Honey_IITD
 import os
 
 from ament_index_python.packages import get_package_share_directory
@@ -12,7 +13,7 @@ import xacro
 
 def generate_launch_description():
 
-    # Check if we're told to use sim time
+    # Check if we have to use sim time
     use_sim_time = LaunchConfiguration('use_sim_time')
 
     # Process the URDF file
@@ -30,7 +31,7 @@ def generate_launch_description():
     )
 
 
-    # Launch!
+    # Launch
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
