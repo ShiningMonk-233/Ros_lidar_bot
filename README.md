@@ -1,4 +1,4 @@
-# 🤖 ROS2 LiDAR Bot
+# 🤖 SEMANTIC SLAM
 
 > A ROS2-based autonomous differential drive robot equipped with LiDAR for obstacle detection and navigation in Gazebo simulation.
 
