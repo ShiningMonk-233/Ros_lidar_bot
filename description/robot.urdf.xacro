@@ -5,4 +5,5 @@
 
   <xacro:include filename="$(find Ros_lidar_bot)/description/robot_control.xacro"/>
 
+  <xacro:include filename="$(find Ros_lidar_bot)/description/lidar.xacro"/>
 </robot>

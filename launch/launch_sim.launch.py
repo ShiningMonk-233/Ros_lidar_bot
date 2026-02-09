@@ -40,7 +40,7 @@ def generate_launch_description():
             'gz_args': '-r ' + os.path.join(
                 get_package_share_directory(package_name),
                 'worlds',
-                'testing_world.sdf'
+                'empty.world'
             )
         }.items()
     )
@@ -52,7 +52,7 @@ def generate_launch_description():
             '-topic', 'robot_description',
             '-name', 'my_bot',
             '-world', 'default',
-            '-z', '0.8'
+            '-z', '0.1'
         ],
         output='screen'
     )
@@ -61,10 +61,10 @@ def generate_launch_description():
         package='ros_gz_bridge',
         executable='parameter_bridge',
         arguments=[
-            '/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry',
-            '/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
-            '/tf@tf2_msgs/msg/TFMessage@gz.msgs.Pose_V',
-            '/joint_state@sensor_msgs/msg/JointState@gz.msgs.Model',
+            '/odom@nav_msgs/msg/Odometry@ignition.msgs.Odometry',
+            '/cmd_vel@geometry_msgs/msg/Twist@ignition.msgs.Twist',
+            '/tf@tf2_msgs/msg/TFMessage@ignition.msgs.Pose_V',
+            '/scan@sensor_msgs/msg/LaserScan@ignition.msgs.LaserScan'
 
 
         ],
