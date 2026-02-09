@@ -23,7 +23,7 @@
 
 ## 📖 About
 
-The **ROS2 LiDAR Bot** project focuses on building and simulating a mobile robot capable of:
+The **SEMANTIC SLAM** project focuses on building and simulating a mobile robot capable of:
 
 - Perceiving its environment using LiDAR sensors  
 - Publishing scan data in ROS2  
@@ -40,14 +40,17 @@ This project serves as both a learning platform and a foundation for real-world 
 
 - Build a working LiDAR-enabled robot simulation  
 - Implement obstacle detection and avoidance  
-- Integrate ROS2 Navigation (Nav2) for autonomous movement  
+- Integrate ROS2 Navigation (Nav2) for autonomous movement
+- testing Slam_toolbox , Cartographer , G-Mapping.
+- Integrate ML to predict the environmental features.
 
 ### Learning Outcomes
 
 - Understanding ROS2 nodes, topics, TF frames  
 - Working with URDF/Xacro robot models  
 - Using Gazebo plugins for sensors and motion  
-- Practicing SLAM + Path Planning pipelines  
+- Practicing SLAM + Path Planning pipelines
+- Different SLAM algorithms such as Pose-Graph optimisation etc.
 
 ---
 
@@ -65,14 +68,14 @@ This project serves as both a learning platform and a foundation for real-world 
 
 - [x] Add chassis and wheel links  
 - [x] Configure joints properly  
-- [ ] Improve inertial and collision properties  
+- [x] Improve inertial and collision properties  
 
 ---
 
 ### Phase 3: LiDAR Integration
 
 - [x] Add LiDAR sensor in URDF  
-- [ ] Verify `/scan` topic publishing  
+- [x] Verify `/scan` topic publishing  
 - [ ] Tune sensor parameters for accuracy  
 
 ---
@@ -80,20 +83,30 @@ This project serves as both a learning platform and a foundation for real-world 
 ### Phase 4: Motion Control
 
 - [x] Configure diff-drive Gazebo plugin  
-- [ ] Publish velocity commands via `/cmd_vel`  
+- [x] Publish velocity commands via `/cmd_vel`  
 - [ ] Validate odometry output  
 
 ---
 
 ### Phase 5: Navigation & Autonomy
 
-- [ ] Integrate SLAM Toolbox  
+- [ ] Integrate SLAM Toolbox
+- [ ] Integrate Cartographer
+- [ ] Integrate G-Mapping
 - [ ] Configure Nav2 stack  
 - [ ] Achieve goal-to-goal autonomous navigation  
 
 ---
 
-### Phase 6: Testing & Optimization
+### Phase 6: Train Model , introduce Semantic Slam
+
+- [ ] Run obstacle avoidance benchmarks  
+- [ ] Improve stability and localization  
+- [ ] Add documentation + demo videos  
+
+---
+
+### Phase 7: Implement on Hardware
 
 - [ ] Run obstacle avoidance benchmarks  
 - [ ] Improve stability and localization  
