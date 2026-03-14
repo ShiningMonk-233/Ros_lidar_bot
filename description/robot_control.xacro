@@ -10,8 +10,8 @@
         <left_joint>left_wheel_joint</left_joint>
         <right_joint>right_wheel_joint</right_joint>
 
-        <wheel_separation>0.35</wheel_separation>
-        <wheel_radius>0.05</wheel_radius>
+        <wheel_separation>0.23</wheel_separation>
+        <wheel_radius>0.081</wheel_radius>
 
         <!-- limits -->
         <max_wheel_torque>200</max_wheel_torque>

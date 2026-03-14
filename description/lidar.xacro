@@ -4,32 +4,36 @@
     <!-- LIDAR SENSOR -->
 
     <!-- Lidar Joint -->
-    <joint name="laser_joint" type="fixed">
+    <!--joint name="laser_joint" type="fixed">
         <parent link="chassis"/>
         <child link="laser_frame"/>
         <origin xyz="0.1 0 0.15" rpy="0 0 0"/>
+    </joint-->
+    <joint name="laser_joint" type="fixed">
+        <origin xyz="-0.125 -0.073241 0.198241" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="laser_frame"/>
     </joint>
-
     <!-- Lidar Link -->
     <link name="laser_frame">
+        <inertial>
+            <origin xyz="0.16 7.135009756631394e-08 0.01499992864990235" rpy="0 0 0"/>
+            <mass value="2.663442251713426"/>
+            <inertia ixx="0.002597" iyy="0.002597" izz="0.004794" ixy="0.0" iyz="0.0" ixz="0.0"/>
+        </inertial>
         <visual>
+            <origin xyz="0.125 0.073241 -0.198241" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.05" length="0.04"/>
+            <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="lidar_black">
-                <color rgba="0.1 0.1 0.1 1"/>
-            </material>
+            <material name="silver"/>
         </visual>
         <collision>
+            <origin xyz="0.125 0.073241 -0.198241" rpy="0 0 0"/>
             <geometry>
-                <cylinder radius="0.05" length="0.04"/>
+            <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-        </inertial>
     </link>
 
     <!-- Gazebo Lidar Color -->
