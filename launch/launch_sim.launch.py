@@ -57,6 +57,21 @@ def generate_launch_description():
         output='screen'
     )
 
+    slam_params_file = os.path.join(
+        get_package_share_directory(package_name), 'config', 'mapper_params_online_async.yaml'
+    )
+
+    slam_toolbox = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            get_package_share_directory('slam_toolbox'),
+            '/launch/online_async_launch.py'
+        ]),
+        launch_arguments={
+            'slam_params_file': slam_params_file,
+            'use_sim_time': 'true'
+        }.items()
+    )
+
     bridge = Node(
         package='ros_gz_bridge',
         executable='parameter_bridge',
@@ -76,5 +91,6 @@ def generate_launch_description():
         rsp,
         gz_sim,
         spawn_entity,
-        bridge
+        bridge,
+        slam_toolbox
     ])

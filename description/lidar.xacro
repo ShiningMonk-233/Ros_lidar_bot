@@ -26,7 +26,9 @@
             <geometry>
             <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="silver"/>
+            <material name="silver">
+                <color rgba="0.00 0.00 0.00 1.0"/>   <!-- inline RGBA, no external file needed -->
+            </material>
         </visual>
         <collision>
             <origin xyz="0.125 0.073241 -0.198241" rpy="0 0 0"/>
