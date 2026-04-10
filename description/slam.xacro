@@ -1,13 +1,12 @@
 <?xml version="1.0" ?>
 <robot name="slam" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find Ros_lidar_bot)/description/materials.xacro" />
 <xacro:include filename="$(find Ros_lidar_bot)/description/slam.gazebo" />
 <link name="base_link">
   <inertial>
-    <origin xyz="-0.12499450936127811 -0.0732393668268621 0.25843254250315395" rpy="0 0 0"/>
-    <mass value="11.269909330356606"/>
-    <inertia ixx="0.1243" iyy="0.218253" izz="0.256396" ixy="-2e-06" iyz="-0.0" ixz="3e-06"/>
+    <origin xyz="-0.0019297244191736867 0.0018747496550703066 0.06995619724607677" rpy="0 0 0"/>
+    <mass value="21.04115508065235"/>
+    <inertia ixx="0.188108" iyy="0.289502" izz="0.293599" ixy="-0.000208" iyz="-0.000266" ixz="-7.4e-05"/>
   </inertial>
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -27,75 +26,74 @@
 </link>
 
 <joint name = "base_footprint_joint" type= "fixed">
-    <parent link= "base_link"/>
-    <child link= "base_footprint"/>
+    <parent link= "base_footprint"/>
+    <child link= "base_link"/>
     <origin xyz = "0 0 0" rpy = "0 0 0"/>
 </joint>
 
 <link name = "base_footprint">
 </link>
 
-
-<link name="BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001__1__1">
+<link name="wheel_urdf_1">
   <inertial>
-    <origin xyz="7.392549115040059e-06 -0.04111510772339333 -1.6452849457837537e-07" rpy="0 0 0"/>
-    <mass value="7.7692039603760845"/>
-    <inertia ixx="0.01318" iyy="0.022658" izz="0.013179" ixy="-3e-06" iyz="0.0" ixz="0.0"/>
+    <origin xyz="-4.001574910018034e-07 -0.05000001627830493 -4.836244008737944e-07" rpy="0 0 0"/>
+    <mass value="7.44298937241317"/>
+    <inertia ixx="0.013521" iyy="0.024417" izz="0.013521" ixy="-0.0" iyz="0.0" ixz="0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.125 0.188241 -0.226241" rpy="0 0 0"/>
+    <origin xyz="0.001839 0.112411 -0.034922" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Ros_lidar_bot)/meshes/BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Ros_lidar_bot)/meshes/wheel_urdf_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.00 0.00 0.00 1.0"/>
     </material>
   </visual>
   <collision>
-    <origin xyz="0.125 0.188241 -0.226241" rpy="0 0 0"/>
+    <origin xyz="0.001839 0.112411 -0.034922" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Ros_lidar_bot)/meshes/BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001__1__1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Ros_lidar_bot)/meshes/wheel_urdf_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001_1">
+<link name="wheel_urdf__1__1">
   <inertial>
-    <origin xyz="-7.3925491141657584e-06 0.04011525042358858 -1.6452849452286422e-07" rpy="0 0 0"/>
-    <mass value="7.7692039603760845"/>
-    <inertia ixx="0.01318" iyy="0.022658" izz="0.013179" ixy="-3e-06" iyz="-0.0" ixz="-0.0"/>
+    <origin xyz="-4.0015749095214694e-07 0.04999998372169512 -4.836244007905277e-07" rpy="0 0 0"/>
+    <mass value="7.44298937241317"/>
+    <inertia ixx="0.013521" iyy="0.024417" izz="0.013521" ixy="0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.125 -0.041759 -0.226241" rpy="0 0 0"/>
+    <origin xyz="0.001839 -0.117589 -0.034922" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Ros_lidar_bot)/meshes/BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Ros_lidar_bot)/meshes/wheel_urdf__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="black">
       <color rgba="0.00 0.00 0.00 1.0"/>
     </material>
   </visual>
   <collision>
-    <origin xyz="0.125 -0.041759 -0.226241" rpy="0 0 0"/>
+    <origin xyz="0.001839 -0.117589 -0.034922" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Ros_lidar_bot)/meshes/BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find Ros_lidar_bot)/meshes/wheel_urdf__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="ball_caster_wheel__1__1">
   <inertial>
-    <origin xyz="6.938893903907228e-18 7.135010103576089e-08 -0.012099122560755626" rpy="0 0 0"/>
-    <mass value="0.14791134084474702"/>
-    <inertia ixx="2.2e-05" iyy="2e-05" izz="2.4e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+    <origin xyz="-4.001574910317274e-07 -1.6278612177851592e-08 -0.012099534835058778" rpy="0 0 0"/>
+    <mass value="0.1479113408447469"/>
+    <inertia ixx="2.2e-05" iyy="2e-05" izz="2.4e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="-0.04 0.073241 -0.174741" rpy="0 0 0"/>
+    <origin xyz="0.166839 -0.002589 0.016578" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find Ros_lidar_bot)/meshes/ball_caster_wheel__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </visual>
   <collision>
-    <origin xyz="-0.04 0.073241 -0.174741" rpy="0 0 0"/>
+    <origin xyz="0.166839 -0.002589 0.016578" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find Ros_lidar_bot)/meshes/ball_caster_wheel__1__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -104,46 +102,46 @@
 
 <link name="ball_caster_wheel_1">
   <inertial>
-    <origin xyz="0.0 7.135010100800532e-08 -0.012099122560755599" rpy="0 0 0"/>
-    <mass value="0.14791134084474702"/>
-    <inertia ixx="2.2e-05" iyy="2e-05" izz="2.4e-05" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+    <origin xyz="-4.001574910039718e-07 -1.627861223596483e-08 -0.012099534835058767" rpy="0 0 0"/>
+    <mass value="0.1479113408447469"/>
+    <inertia ixx="2.2e-05" iyy="2e-05" izz="2.4e-05" ixy="0.0" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.29 0.073241 -0.174741" rpy="0 0 0"/>
+    <origin xyz="-0.163161 -0.002589 0.016578" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find Ros_lidar_bot)/meshes/ball_caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </visual>
   <collision>
-    <origin xyz="0.29 0.073241 -0.174741" rpy="0 0 0"/>
+    <origin xyz="-0.163161 -0.002589 0.016578" rpy="0 0 0"/>
     <geometry>
       <mesh filename="file://$(find Ros_lidar_bot)/meshes/ball_caster_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<joint name="left_wheel_joint" type="continuous">
-  <origin xyz="-0.125 -0.188241 0.226241" rpy="0 0 0"/>
+<joint name="right_wheel_joint" type="continuous">
+  <origin xyz="-0.001839 -0.112411 0.034922" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001__1__1"/>
-  <axis xyz="0 1 0"/>
+  <child link="wheel_urdf_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
 </joint>
 
-<joint name="right_wheel_joint" type="continuous">
-  <origin xyz="-0.125 0.041759 0.226241" rpy="0 0 0"/>
+<joint name="left_wheel_joint" type="continuous">
+  <origin xyz="-0.001839 0.117589 0.034922" rpy="0 0 0"/>
   <parent link="base_link"/>
-  <child link="BHARAT_-FIH_-AMR-MAIN_WHEEL_WITH_MOTOR-PA-001_1"/>
-  <axis xyz="0 1 0"/>
+  <child link="wheel_urdf__1__1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
 </joint>
 
 <joint name="Rigid 3" type="fixed">
-  <origin xyz="0.04 -0.073241 0.174741" rpy="0 0 0"/>
+  <origin xyz="-0.166839 0.002589 -0.016578" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="ball_caster_wheel__1__1"/>
 </joint>
 
 <joint name="Rigid 4" type="fixed">
-  <origin xyz="-0.29 -0.073241 0.174741" rpy="0 0 0"/>
+  <origin xyz="0.163161 0.002589 -0.016578" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="ball_caster_wheel_1"/>
 </joint>

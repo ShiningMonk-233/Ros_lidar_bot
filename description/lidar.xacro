@@ -10,38 +10,32 @@
         <origin xyz="0.1 0 0.15" rpy="0 0 0"/>
     </joint-->
     <joint name="laser_joint" type="fixed">
-        <origin xyz="-0.125 -0.073241 0.198241" rpy="0 0 0"/>
+        <origin xyz="-0.001839 0.002589 0.104922" rpy="0 0 0"/>
         <parent link="base_link"/>
         <child link="laser_frame"/>
     </joint>
     <!-- Lidar Link -->
     <link name="laser_frame">
         <inertial>
-            <origin xyz="0.16 7.135009756631394e-08 0.01499992864990235" rpy="0 0 0"/>
-            <mass value="2.663442251713426"/>
-            <inertia ixx="0.002597" iyy="0.002597" izz="0.004794" ixy="0.0" iyz="0.0" ixz="0.0"/>
+            <origin xyz="-4.0015749110241736e-07 -1.6278304991717424e-08 0.04331001637559857" rpy="0 0 0"/>
+    <mass value="0.5565046796809807"/>
+    <inertia ixx="0.000186" iyy="0.000186" izz="0.000341" ixy="0.0" iyz="0.0" ixz="-0.0"/>
         </inertial>
         <visual>
-            <origin xyz="0.125 0.073241 -0.198241" rpy="0 0 0"/>
+            <origin xyz="0.001839 -0.002589 -0.104922" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_urdf_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
-            <material name="silver">
-                <color rgba="0.00 0.00 0.00 1.0"/>   <!-- inline RGBA, no external file needed -->
-            </material>
         </visual>
         <collision>
-            <origin xyz="0.125 0.073241 -0.198241" rpy="0 0 0"/>
+            <origin xyz="0.001839 -0.002589 -0.104922" rpy="0 0 0"/>
             <geometry>
-            <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+            <mesh filename="file://$(find Ros_lidar_bot)/meshes/lidar_urdf_1.stl" scale="0.001 0.001 0.001"/>
             </geometry>
         </collision>
     </link>
 
     <!-- Gazebo Lidar Color -->
-    <gazebo reference="laser_frame">
-        <material>Gazebo/Black</material>
-    </gazebo>
 
     <!-- Ignition Gazebo Lidar Plugin (GPU Lidar sensor) -->
     <gazebo reference="laser_frame">
@@ -49,7 +43,7 @@
             <pose>0 0 0 0 0 0</pose>
             <topic>scan</topic>
             <ignition_frame_id>laser_frame</ignition_frame_id>
-            <update_rate>10</update_rate>
+            <update_rate>20</update_rate>
             <visualize>true</visualize>
             <always_on>true</always_on>
             <ray>
@@ -76,10 +70,5 @@
     </gazebo>
 
     <!-- Ignition Gazebo Sensors Plugin (required to activate sensors) -->
-    <gazebo>
-        <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
-            <render_engine>ogre2</render_engine>
-        </plugin>
-    </gazebo>
 
 </robot>
