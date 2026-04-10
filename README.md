@@ -84,13 +84,13 @@ This project serves as both a learning platform and a foundation for real-world 
 
 - [x] Configure diff-drive Gazebo plugin  
 - [x] Publish velocity commands via `/cmd_vel`  
-- [ ] Validate odometry output  
+- [x] Validate odometry output  
 
 ---
 
 ### Phase 5: Navigation & Autonomy
 
-- [ ] Integrate SLAM Toolbox
+- [x] Integrate SLAM Toolbox
 - [ ] Integrate Cartographer
 - [ ] Integrate G-Mapping
 - [ ] Configure Nav2 stack  
@@ -100,7 +100,7 @@ This project serves as both a learning platform and a foundation for real-world 
 
 ### Phase 6: Train Model , introduce Semantic Slam
 
-- [ ] Run obstacle avoidance benchmarks  
+- [x] Run obstacle avoidance benchmarks  
 - [ ] Improve stability and localization  
 - [ ] Add documentation + demo videos  
 
@@ -119,9 +119,9 @@ This project serves as both a learning platform and a foundation for real-world 
 | Category        | Tools Used |
 |----------------|------------|
 | Framework       | ROS2 Humble |
-| Simulation      | Gazebo Classic |
+| Simulation      | Gazebo Fortress Ignition |
 | Robot Model     | URDF / Xacro |
-| Sensors         | LiDAR |
+| Sensors         | LiDAR || IMU || Camera |
 | Control         | Diff Drive Plugin |
 | Navigation      | SLAM Toolbox + Nav2 (Planned) |
 | Version Control | Git + GitHub |
@@ -143,3 +143,12 @@ ros2_lidar_bot/
 │── README.md
 │── package.xml
 │── setup.py
+```
+---
+
+## ⚙️ Installation
+
+ROS2 Humble (Go for Desktop Install) : https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
+Gazebo Fortress Ignition : https://gazebosim.org/docs/fortress/install_ubuntu/
+Note : Make sure you have selected Fortress LTS in top right Corner , and Binary Installation.
+
