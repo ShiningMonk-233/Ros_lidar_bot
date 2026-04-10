@@ -148,7 +148,7 @@ ros2_lidar_bot/
 
 ## ⚙️ Installation
 
-ROS2 Humble (Go for Desktop Install) : https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
-Gazebo Fortress Ignition : https://gazebosim.org/docs/fortress/install_ubuntu/
-Note : Make sure you have selected Fortress LTS in top right Corner , and Binary Installation.
+- ROS2 Humble (Go for Desktop Install) : https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
+- Gazebo Fortress Ignition : https://gazebosim.org/docs/fortress/install_ubuntu/
+- Note : Make sure you have selected Fortress LTS in top right Corner , and Binary Installation.
 
