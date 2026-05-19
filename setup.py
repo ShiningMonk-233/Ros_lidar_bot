@@ -29,6 +29,7 @@ setup(
     entry_points={
         'console_scripts': [
             'teleop = Ros_lidar_bot.teleop_node:main',
+            'camera = Ros_lidar_bot.camera_node:main',
         ],
     },
 )

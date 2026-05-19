@@ -42,5 +42,9 @@ install(
   DIRECTORY config description launch worlds meshes
   DESTINATION share/${PROJECT_NAME}
 )
+install(PROGRAMS
+  Ros_lidar_bot/camera_node.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_package()
