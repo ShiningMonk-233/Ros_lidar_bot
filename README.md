@@ -39,7 +39,7 @@ This project serves as both a learning platform and a foundation for real-world 
 ### Primary Objectives
 
 - Build a working LiDAR-enabled robot simulation  
-- Implement obstacle detection and avoidance  
+- Implement obstacle detection & avoidance  
 - Integrate ROS2 Navigation (Nav2) for autonomous movement
 - testing Slam_toolbox , Cartographer , G-Mapping.
 - Integrate ML to predict the environmental features.
